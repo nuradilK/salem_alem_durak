@@ -3,7 +3,7 @@ from durak.player import Player
 
 class Human(Player):
     def __init__(self, name):
-        Player.__init__(self, name)
+        super().__init__(self, name)
 
     def selectCard(self) -> Card:
         while True:

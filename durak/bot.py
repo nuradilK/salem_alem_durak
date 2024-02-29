@@ -3,7 +3,7 @@ from durak.player import Player
 
 class Bot(Player):
     def __init__(self, name: str) -> None:
-        Player.__init__(self, name)
+        super().__init__(self, name)
 
     def selectDefendingCard(self, card: Card) -> Card:
         candidates: list[Card] = []
