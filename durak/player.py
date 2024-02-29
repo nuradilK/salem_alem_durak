@@ -69,3 +69,6 @@ class Player:
 
     def hasCards(self) -> bool:
         return len(self.hand) > 0
+    
+    def hasWon(self) -> bool:
+        return not self.hasCards()

@@ -34,8 +34,14 @@ class Game:
             self.clearTable()
             print("~~~~~~~~~ PHASE COMPLETED ~~~~~~~~~")
             self.fillHands()
+            self.removeIfWon(self.attackingPlayer())
             self.moveTurn(outcome)
-        print("Player", self.activePlayer, "lost")
+        print("Player", self.defendingPlayer(), "lost")
+
+    def removeIfWon(self, player: Player) -> None:
+        if player.hasWon():
+            self.activePlayer = self.nextPlayer()
+            self.players.remove(player)
 
     def moveTurn(self, outcome: GameOutcome) -> None:
         if outcome == GameOutcome.PHASE_STATUS_DEFENDED:

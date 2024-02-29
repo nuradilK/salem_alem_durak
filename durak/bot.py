@@ -11,7 +11,7 @@ class Bot(Player):
             if candidate > card and (candidate.sameSuit(card) or candidate.isTrump()):
                 candidates.append(candidate)
         sorted_candidates = sorted(candidates)
-        print("Defending with", sorted_candidates[0])
+        print(self, "Defending with", sorted_candidates[0])
         return sorted_candidates[0]
 
     def selectAttackingCard(self, table: list[Card]) -> Card:

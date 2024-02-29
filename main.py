@@ -1,6 +1,6 @@
 from durak.game import Game
-from durak.bot  import Bot
-from durak.human   import Human
+from durak.bot import Bot
+from durak.human import Human
 
 def main() -> None:
     game = Game()
