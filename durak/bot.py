@@ -19,5 +19,5 @@ class Bot(Player):
             return self.hand[0]
         for card in self.hand:
             for table_card in table:
-                if card.sameRank(table_card) or card.sameSuit(table_card):
+                if card.sameRank(table_card):
                     return card
