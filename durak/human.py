@@ -26,7 +26,7 @@ class Human(Player):
                 print("You cannot use this card for the attack")
         return card
 
-    def willDefendFrom(self, card: Card):
+    def willDefendFrom(self, card: Card) -> bool:
         if not super().willDefendFrom(card):
             print("You cannot defend the card")
             return False
