@@ -68,6 +68,7 @@ class Game:
             self.lastCard = self.attack()
             if not defender.willDefendFrom(self.lastCard):
                 print(defender, "Can't defend from", self.lastCard)
+                self.takeCards(defender, self.table)
                 return GameOutcome.PHASE_STATUS_SURRENDERED
             self.lastCard = self.defend()
 
@@ -93,9 +94,11 @@ class Game:
                 else:
                     break
 
+    def takeCards(self, player: Player, cards: list[Card]) -> None:
+        for card in cards:
+            player.takeCard(card)
+
     def clearTable(self) -> None:
-        for card in self.table:
-            self.defendingPlayer().takeCard(card)
         self.table = []
 
     def nextPlayer(self) -> Player:
