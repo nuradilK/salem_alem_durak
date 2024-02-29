@@ -12,7 +12,7 @@ class Deck:
         print(f"\t\tTrump suit is {trump_suit}")
         print(self.cards)
 
-    def isEmpty(self):
+    def isEmpty(self) -> bool:
         return len(self.cards) == 0
 
     def drawCard(self) -> Card:

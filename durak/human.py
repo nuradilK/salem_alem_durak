@@ -26,7 +26,7 @@ class Human(Player):
                 print("You cannot use this card for the attack")
         return card
 
-    def willDefendFrom(self, card):
+    def willDefendFrom(self, card: Card):
         if not super().willDefendFrom(card):
             print("You cannot defend the card")
             return False
@@ -44,7 +44,7 @@ class Human(Player):
         else:
             return False
 
-    def willAttack(self, table):
+    def willAttack(self, table: list[Card]) -> bool:
         if not self.canAttack(table):
             print("You cannot attack")
             return False
@@ -64,7 +64,7 @@ class Human(Player):
         else:
             return False
 
-    def selectDefendingCard(self, card: Card):
+    def selectDefendingCard(self, card: Card) -> Card:
         while True:
             picked_card = self.selectCard()
             if picked_card < card:

@@ -2,7 +2,7 @@ from durak.card import Card
 from durak.player import Player
 
 class Bot(Player):
-    def __init__(self, name) -> None:
+    def __init__(self, name: str) -> None:
         Player.__init__(self, name)
 
     def selectDefendingCard(self, card: Card) -> Card:

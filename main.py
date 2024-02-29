@@ -2,7 +2,7 @@ from durak.game import Game
 from durak.bot  import Bot
 from durak.human   import Human
 
-def main():
+def main() -> None:
     game = Game()
     aisultan = Bot('Aisultan')
     almas = Human('Almas')
