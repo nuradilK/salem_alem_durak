@@ -67,5 +67,5 @@ class Player:
     def shouldTakeCard(self) -> int:
         return len(self.hand) < 6
 
-    def hasNoCards(self) -> bool:
-        return len(self.hand) == 0
+    def hasCards(self) -> bool:
+        return len(self.hand) > 0

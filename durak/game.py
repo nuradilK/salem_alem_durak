@@ -116,6 +116,6 @@ class Game:
             return False
         num_player_with_cards = 0
         for player in self.players:
-            if not player.hasNoCards():
+            if player.hasCards():
                 num_player_with_cards += 1
         return num_player_with_cards == 1
