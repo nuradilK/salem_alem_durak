@@ -5,9 +5,11 @@ from durak.card import Card
 from durak.deck import Deck
 from durak.player import Player
 
+
 class GameOutcome(Enum):
     PHASE_STATUS_DEFENDED = 0
     PHASE_STATUS_SURRENDERED = 1
+
 
 class Game:
     def __init__(self) -> None:
@@ -19,7 +21,7 @@ class Game:
 
     def addPlayer(self, player: Player) -> None:
         if len(self.players) == 6:
-            raise RuntimeError('There can be at most 6 players')
+            raise RuntimeError("There can be at most 6 players")
         self.players.append(player)
         if self.activePlayer == None:
             self.activePlayer = player
@@ -80,7 +82,7 @@ class Game:
         print(attackingPlayer, "Attacking with", attackingCard)
         return attackingCard
 
-    def defend(self) -> Card: 
+    def defend(self) -> Card:
         defendingCard = self.defendingPlayer().defend(self.lastCard)
         self.addCardToTable(defendingCard)
         return defendingCard

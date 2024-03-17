@@ -1,6 +1,7 @@
 from abc import abstractmethod
 from durak.card import Card
 
+
 class Player:
     def __init__(self, name: str) -> None:
         self.name: str = name
@@ -56,9 +57,9 @@ class Player:
     def printCards(self) -> None:
         print(self.name + "'s cards")
         for card in self.hand:
-            print(card, end=', ')
+            print(card, end=", ")
         print()
-        
+
     def removeCard(self, card: Card) -> None:
         indx = self.hand.index(card)
         self.hand.pop(indx)
@@ -69,6 +70,6 @@ class Player:
 
     def hasCards(self) -> bool:
         return len(self.hand) > 0
-    
+
     def hasWon(self) -> bool:
         return not self.hasCards()

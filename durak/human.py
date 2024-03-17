@@ -1,6 +1,7 @@
 from durak.card import Card
 from durak.player import Player
 
+
 class Human(Player):
     def __init__(self, name):
         super().__init__(name)
@@ -35,7 +36,7 @@ class Human(Player):
         print("Will you defend? (Y/N) ")
         while True:
             result = input().lower()
-            if result not in ['y', 'n']:
+            if result not in ["y", "n"]:
                 print("The input should either Y or N")
             else:
                 break
@@ -55,7 +56,7 @@ class Human(Player):
         print("Will you attack? (Y/N) ")
         while True:
             result = input().lower()
-            if result not in ['y', 'n']:
+            if result not in ["y", "n"]:
                 print("The input should either Y or N")
             else:
                 break

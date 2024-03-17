@@ -1,6 +1,7 @@
 from durak.card import Card
 from durak.player import Player
 
+
 class Bot(Player):
     def __init__(self, name: str) -> None:
         super().__init__(name)

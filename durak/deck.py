@@ -1,6 +1,7 @@
 import random
 from durak.card import Card, Suit, Rank
 
+
 class Deck:
     def __init__(self):
         self.cards: list[Card] = []
