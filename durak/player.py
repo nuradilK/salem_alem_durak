@@ -12,7 +12,7 @@ class Player:
         pass
 
     @abstractmethod
-    def selectDefendingCard(self) -> Card:
+    def selectDefendingCard(self, card: Card) -> Card:
         pass
 
     def __repr__(self) -> str:
